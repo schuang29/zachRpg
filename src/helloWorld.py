@@ -1,11 +1,22 @@
 import sys
 
-print ("Hello World!")
-x = input("Tell me your name: ")
-<<<<<<< HEAD
-print ("Hello", x)
-=======
-print ("Hello", x)
+commandList = ['? - Help', 'go - Move direction', 'bye - Exit game']
 
-print("Zac is a butt.")
->>>>>>> origin/master
+def listCommands(commandList):
+    print ('\tYou can do the folowing: ')
+    for x in commandList:
+        print ('\t', x)
+
+
+print ("Hello World!")
+
+command = ''
+
+while command != 'bye':
+    command = input('What\'s your command: ')
+
+    print ('\tYou entered', command)
+
+    if command == '?': listCommands(commandList)
+
+print('See you later')
