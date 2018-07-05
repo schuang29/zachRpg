@@ -1,4 +1,5 @@
 import sys
+<<<<<<< HEAD
 import Weapons
 
 disk = Weapons.Weapon("Scratched Fortnite Disk", 2, "Blah")
@@ -34,4 +35,30 @@ while command != 'exit':
 
     command = input('What\'s your next command?: ')
 
+=======
+import Main
+
+commandList = ['? - Help', 'go - Move direction', 'bye - Exit game']
+
+def listCommands(commandList):
+    print ('\tYou can do the folowing: ')
+    for x in commandList:
+        print ('\t', x)
+
+
+print ("Hello World!")
+
+command = ''
+
+while command != 'bye':
+    command = input('What\'s your command: ')
+
+    print ('\tYou entered', command)
+
+    if command == '?':
+        listCommands(commandList)
+    elif command == 'go':
+        Main.Start()
+    
+>>>>>>> a49f22ff4580b765bccdf9213a631f69c19a8b90
 print('See you later')
