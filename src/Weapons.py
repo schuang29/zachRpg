@@ -1,5 +1,5 @@
 class Weapon:
-    def __init__(self, name, damage):
+    def __init__(self, name, damage, description=""):
         self.name = name
         self.damage = damage
 
