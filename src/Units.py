@@ -6,4 +6,5 @@ class Unit:
 
 def MakeGoblin():
     goblin = Unit("Baby Goblin", 5, 1)
+    
     return goblin
