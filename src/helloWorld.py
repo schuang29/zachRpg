@@ -1,4 +1,5 @@
 import sys
+import Main
 
 commandList = ['? - Help', 'go - Move direction', 'bye - Exit game']
 
@@ -17,6 +18,9 @@ while command != 'bye':
 
     print ('\tYou entered', command)
 
-    if command == '?': listCommands(commandList)
-
+    if command == '?':
+        listCommands(commandList)
+    elif command == 'go':
+        Main.Start()
+    
 print('See you later')

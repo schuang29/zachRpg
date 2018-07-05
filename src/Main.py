@@ -3,17 +3,18 @@ import Weapons
 import Rooms
 import Map
 
-stop = False
-# Main Loop
-while stop == False:
-    print("You are at:", str(Map.pos[0]) + ",", str(Map.pos[1]))
+def Start():
+    stop = False
+    while stop == False:
+        print("You are at:", str(Map.pos[0]) + ",", str(Map.pos[1]))
     
-    moveOptions = Map.MoveOptions()
+        moveOptions = Map.MoveOptions()
     
-    print("You may move:" + moveOptions)
-    inp = input("Which way would you like to go? ")
+        print("You may move:" + moveOptions)
+        inp = input("Which way would you like to go? ")
 
-    Map.Move(inp)
+        Map.Move(inp)
+
 
 def Encounter():
     room = Rooms.FirstRoom()

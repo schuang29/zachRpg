@@ -7,7 +7,7 @@ def MakeMap():
     highX = 0
     for coord in mapArr:
         if coord[0] > highest:
-             
+             return
 
 def MoveOptions():
     moveOptions = ""
