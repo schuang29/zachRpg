@@ -1,6 +1,6 @@
 pos = (0, 0)
 mapArr = [
-    (0, 0), (1, 0), (2, 0)
+    (0, 0), (1, 0), (2, 0), (2, 1), (1, 1)
 ]
 
 def MakeMap():
@@ -11,15 +11,14 @@ def MakeMap():
 
 def MoveOptions():
     moveOptions = ""
-
+    if (pos[0], pos[1] + 1) in mapArr:
+        moveOptions += " N"
+    if (pos[0], pos[1] - 1) in mapArr:
+        moveOptions += " S"
     if (pos[0] + 1, pos[1]) in mapArr:
         moveOptions += " E"
     if (pos[0] - 1, pos[1]) in mapArr:
         moveOptions += " W"
-    if (pos[0], pos[1] - 1) in mapArr:
-        moveOptions += " S"
-    if (pos[0], pos[1] + 1) in mapArr:
-        moveOptions += " N"
 
     return moveOptions
 

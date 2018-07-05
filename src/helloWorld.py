@@ -3,12 +3,12 @@ import Weapons
 import Main
 
 disk = Weapons.Weapon("Scratched Fortnite Disk", 2, "Blah")
-backpack = ['scratched fortnite disk']
+backpack = [disk]
 
 def showInv():
     print ('You have ')
     for stuff in backpack:
-        print(stuff)
+        print(stuff.getName())
 
 commandList = ['? - Help', 'go - Move direction', 'exit - Exit game', 'inventory - Open inventory']
 
