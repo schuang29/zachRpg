@@ -1,32 +1,37 @@
 pos = (0, 0)
-mapDict = {
-    (0, 0): [1], 
-    (1, 0): [1, 3]
-}
+mapArr = [
+    (0, 0), (1, 0), (2, 0)
+]
+
+def MakeMap():
+    highX = 0
+    for coord in mapArr:
+        if coord[0] > highest:
+             
 
 def MoveOptions():
     moveOptions = ""
-    options = mapDict[pos]
-    for option in options:
-        if option == 0:
-            moveOptions = " N"
-        elif option == 1:
-            moveOptions = " E"
-        elif option == 2:
-            moveOptions = " S"
-        else:
-            moveOptions = " W"
+
+    if (pos[0] + 1, pos[1]) in mapArr:
+        moveOptions += " E"
+    if (pos[0] - 1, pos[1]) in mapArr:
+        moveOptions += " W"
+    if (pos[0], pos[1] - 1) in mapArr:
+        moveOptions += " S"
+    if (pos[0], pos[1] + 1) in mapArr:
+        moveOptions += " N"
+
     return moveOptions
 
 def Move(inp):
     global pos
-    if inp == "N" and (pos[0], pos[1] + 1) in mapDict.keys():
+    if inp == "N" and (pos[0], pos[1] + 1) in mapArr:
         pos = (pos[0], pos[1] + 1)
-    elif inp == "E" and (pos[0] + 1, pos[1]) in mapDict.keys():
+    elif inp == "E" and (pos[0] + 1, pos[1]) in mapArr:
         pos = (pos[0] + 1, pos[1])
-    elif inp == "S" and (pos[0], pos[1] - 1) in mapDict.keys():
+    elif inp == "S" and (pos[0], pos[1] - 1) in mapArr:
         pos = (pos[0], pos[1] - 1)
-    elif inp == "W" and (pos[0] - 1, pos[1]) in mapDict.keys():
+    elif inp == "W" and (pos[0] - 1, pos[1]) in mapArr:
         pos = (pos[0] - 1, pos[1])
     else:
         print("Cannot move that way!")

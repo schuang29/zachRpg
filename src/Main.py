@@ -4,6 +4,7 @@ import Rooms
 import Map
 
 stop = False
+# Main Loop
 while stop == False:
     print("You are at:", str(Map.pos[0]) + ",", str(Map.pos[1]))
     
