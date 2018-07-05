@@ -11,7 +11,7 @@ def showInv():
     for stuff in backpack:
         print(stuff.getName())
 
-commandList = ['? - Help', 'go - Move direction', 'exit - Exit game', 'inventory - Open inventory']
+commandList = ['? - Help', 'go - Move direction', 'exit - Exit game', 'inventory - Open inventory', 'get - pick up object']
 
 def listCommands(commandList):
     print ('\tYou can do the folowing: ')
@@ -31,7 +31,7 @@ command = input("What would you like to do? ")
 
 while command != 'exit':
     print()
-    
+
     if command == '?': 
         listCommands(commandList)
         print()
